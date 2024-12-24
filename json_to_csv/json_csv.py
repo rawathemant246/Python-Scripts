@@ -21,3 +21,9 @@ class JsonToCsv:
 
         except Exception as e:
             print(e)
+
+
+    def flatten(self, data, parent_key='', sep='_'):
+        items = []
+        for k, v in data.items():
+            new_key = parent_key + sep + k if parent_key else k

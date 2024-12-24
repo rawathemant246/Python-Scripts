@@ -1,0 +1,52 @@
+# How to implement this code
+
+1. Load the json file into a variable using `with open('file.json') as f:` and then use `data = json.load(f)` to load it.
+2. Recursive Flattening Function 
+    1. Traverse through the json structure.
+    2. if a value is an object, continue flattening by appending its key to the parent key.
+    3. if a value is an array, treat each element as a seperate row (expand it)
+
+Flatten All Rows:
+    1. Iterate over the json data (if it's a list) and flatten each row.
+    
+
+
+
+
+Converting a JSON file to a CSV file involves a series of steps to parse the JSON data structure and then format it into a tabular form suitable for CSV. Here's how you can achieve that:
+
+Step-by-Step Guide
+Understand Your JSON Structure
+
+JSON data can come in various structures:
+Simple key-value pairs.
+Nested objects.
+Arrays of objects.
+Identify the specific structure of your JSON to determine how to extract and flatten the data.
+Load the JSON File
+
+Use a programming language like Python, JavaScript, or any tool that supports JSON parsing.
+Read the JSON file into memory using a JSON parsing library.
+Normalize the JSON
+
+If the JSON contains nested objects or arrays, flatten the structure to create a row-column format.
+For example, in Python, libraries like pandas or custom functions can be used to handle nested data.
+Extract Headers
+
+Identify the keys from the JSON objects to form the CSV headers.
+For nested data, use dot notation (e.g., parent.child) or another convention to indicate relationships.
+Write to CSV
+
+Once the JSON is flattened into a list of dictionaries or a similar structure, write the data into a CSV file.
+Most programming languages have built-in libraries (e.g., Python's csv, Node.js's fs) or external packages to handle CSV writing.
+Handle Edge Cases
+
+Missing keys: Fill with default values (e.g., empty strings or null).
+Data types: Ensure all values are properly formatted as strings for CSV compatibility.
+Verify the Output
+
+Open the generated CSV file to ensure the data is correctly formatted and complete.
+Optional Enhancements
+
+Add arguments or options for users to customize the input/output file paths.
+Include error handling for cases like malformed JSON, missing files, or permission issues.
