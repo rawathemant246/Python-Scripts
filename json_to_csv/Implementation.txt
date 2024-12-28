@@ -52,3 +52,4 @@ Add arguments or options for users to customize the input/output file paths.
 Include error handling for cases like malformed JSON, missing files, or permission issues.
 
 Let's test this guide provides a general approach to converting JSON to CSV. The specifics may vary depending on the tools and languages you choose to work with.
+extract values 
